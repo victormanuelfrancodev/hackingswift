@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct UltimatePortfolioApp: App {
+struct UltimateProjectApp: App {
     @StateObject var dataController :DataController
     
     init() {
@@ -18,9 +18,10 @@ struct UltimatePortfolioApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
         }
     }
 }
+
